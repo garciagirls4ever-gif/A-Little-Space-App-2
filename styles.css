@@ -19,10 +19,15 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:10;display:grid;grid-template
 nav button{border:0;background:none;color:var(--muted);padding:8px 2px;font-size:12px}nav button.active{color:var(--ink);font-weight:700}
 @keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.18) rotate(10deg)}}@keyframes drift{from{transform:translate3d(-2%,0,0) scale(1)}to{transform:translate3d(2%,2%,0) scale(1.05)}}@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-8px) rotate(8deg)}}@keyframes pulseSoft{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}@keyframes breathe{0%,100%{transform:scale(.82);box-shadow:0 0 0 0 #9a7b6d18}50%{transform:scale(1.08);box-shadow:0 0 0 18px #9a7b6d08}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
-.angel-wings{height:72px;display:flex;justify-content:center;align-items:center;gap:4px;color:var(--accent);font-size:64px;line-height:1;margin:-4px 0 2px;filter:drop-shadow(0 5px 8px #9a7b6d18)}
-.angel-wings span{display:inline-block;transform-origin:center bottom;animation:wingFloat 2.8s ease-in-out infinite}
-.angel-wings span:first-child{animation-name:wingLeft}
-.angel-wings span:last-child{animation-name:wingRight}
-@keyframes wingLeft{0%,100%{transform:translateY(2px) rotate(4deg) scaleY(.96)}50%{transform:translateY(-3px) rotate(-9deg) scaleY(1.03)}}
-@keyframes wingRight{0%,100%{transform:translateY(2px) rotate(-4deg) scaleY(.96)}50%{transform:translateY(-3px) rotate(9deg) scaleY(1.03)}}
-@media (prefers-reduced-motion:reduce){.angel-wings span{animation:none!important}}
+
+
+.angel-wings{position:relative;height:76px;margin:-3px auto 0;display:flex;justify-content:center;pointer-events:none;opacity:.72;animation:angelFloat 5.5s ease-in-out infinite}
+.angel-wings svg{width:170px;height:86px;overflow:visible;filter:drop-shadow(0 7px 8px #6f554820)}
+.angel-wings .wing{fill:#fffdfb;stroke:#cbb7ad;stroke-width:1.4;stroke-linejoin:round}
+.angel-wings .wing-highlight{fill:#eadfd8;opacity:.72;stroke:none}
+.angel-wings .wing-left{transform-origin:108px 67px;animation:wingBreathLeft 4.5s ease-in-out infinite}
+.angel-wings .wing-right{transform-origin:112px 67px;animation:wingBreathRight 4.5s ease-in-out infinite}
+@keyframes angelFloat{0%,100%{transform:translateY(3px) scale(.97)}50%{transform:translateY(-7px) scale(1)}}
+@keyframes wingBreathLeft{0%,100%{transform:rotate(1deg) scaleY(.97)}50%{transform:rotate(-4deg) scaleY(1.03)}}
+@keyframes wingBreathRight{0%,100%{transform:rotate(-1deg) scaleY(.97)}50%{transform:rotate(4deg) scaleY(1.03)}}
+@media (prefers-reduced-motion:reduce){.angel-wings,.angel-wings .wing{animation:none!important}}
