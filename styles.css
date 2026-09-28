@@ -9,7 +9,7 @@ h1{font-size:36px;line-height:1.08;margin:8px 0 12px}h2{font-size:24px}p{color:v
 .card,.choice{display:block;width:100%;padding:19px;margin:10px 0;border:1px solid var(--line);border-radius:20px;background:#fffdfbe8;color:var(--ink);text-align:left;box-shadow:0 7px 24px #3b2e2710;transition:transform .25s ease,box-shadow .25s ease}
 .card:hover,.choice:hover{transform:translateY(-3px);box-shadow:0 12px 30px #3b2e2718}
 .choice span{display:block;font-size:27px;margin-bottom:6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.feelings{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
-.primary,.secondary{border:0;border-radius:15px;padding:13px 17px;font-weight:700}.primary{background:var(--accent);color:white}.secondary{background:var(--soft);color:var(--ink)}
+.primary,.secondary{border:0;border-radius:15px;padding:13px 17px;font-weight:700}.primary{background:var(--accent);color:white;box-shadow:0 5px 14px #9a7b6d25}.secondary{background:var(--soft);color:var(--ink)}
 .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}textarea,input{width:100%;padding:14px;border:1px solid var(--line);border-radius:15px;background:white;color:var(--ink);outline:0}textarea{min-height:150px}
 .entry{border-left:3px solid var(--accent);padding-left:14px;margin:18px 0}.tool{padding:16px;border-radius:17px;background:var(--soft);margin:10px 0}.empty{text-align:center;padding:25px;color:var(--muted)}
 .song-card{position:relative;overflow:hidden}.song-card:after{content:"♪";position:absolute;right:18px;top:8px;font-size:64px;line-height:1;color:#9a7b6d18;animation:float 4s ease-in-out infinite}
